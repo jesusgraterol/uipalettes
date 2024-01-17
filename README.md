@@ -102,8 +102,27 @@ npm run test:unit
 npm run test:integration
 
 # E2E Tests
-N/A
+npm run test:e2e
 ```
+
+
+
+
+<br/>
+
+## Theme Colors
+
+**Primary Color:** #212121
+
+**Accent Color:** N/A
+
+**Success Color:** #0f766e
+
+**Error Color:** #991b1b
+
+**Text Color:** #1f1d1d
+
+**Light Text Color:** #696161
 
 
 
