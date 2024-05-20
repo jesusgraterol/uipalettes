@@ -1,0 +1,62 @@
+{
+  "name": "uipalettes",
+  "description": "UIPalettes is a Progressive Web App (PWA) designed to empower software developers. Access a curated library of high-quality color palettes, meticulously crafted to align with leading UI design frameworks and meet stringent Web Content Accessibility Guidelines (WCAG).",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && sw-builder",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "echo \"Error: tests are executed with  npm run test:(e2e|integration|unit)\" && exit 1",
+    "test:e2e": "vitest run --config=vitest.test-e2e.config.ts",
+    "test:integration": "vitest run --config vitest.test-integration.config.ts",
+    "test:unit": "vitest run --config vitest.test-unit.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusgraterol/uipalettes"
+  },
+  "keywords": [
+    "palette",
+    "utilities",
+    "accessibility",
+    "colors",
+    "wcag",
+    "palette-generation",
+    "palettes",
+    "utility-application",
+    "ui",
+    "ui-kit",
+    "ui-components",
+    "user-interface",
+    "design",
+    "design-system"
+  ],
+  "author": "Jesus Graterol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesusgraterol/uipalettes/issues"
+  },
+  "homepage": "https://github.com/jesusgraterol/uipalettes#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "sw-builder": "^1.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
+  }
+}
