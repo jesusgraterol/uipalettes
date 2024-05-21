@@ -2,7 +2,7 @@
 
 ![uipalettes](./readme-assets/screenshot-01.png)
 
-uipalettes is a Progressive Web App (PWA) designed to empower software developers. Access a curated library of high-quality color palettes, meticulously crafted to align with leading UI design frameworks and meet stringent Web Content Accessibility Guidelines (WCAG).
+uipalettes is a Progressive Web App (PWA) that provides web developers access to a curated library of high-quality color palettes that fully comply with the Web Content Accessibility Guidelines (WCAG).
 
 
 
