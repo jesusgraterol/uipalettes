@@ -28,12 +28,12 @@ uipalettes is a Progressive Web App (PWA) designed to empower software developer
 
 ### Installation
 
-1) Clone the repository
+Clone the repository
 ```bash
 $ git clone git@github.com:jesusgraterol/uipalettes.git
 ```
 
-2) Install the dependencies
+Install the dependencies
 ```bash
 $ npm install
 ```
@@ -44,13 +44,13 @@ $ npm install
 
 ## Usage
 
-1) Run the Development Vite Server
+Run the Development Vite Server
 
 ```bash
 $ npm run dev
 ```
 
-2) Open `http://localhost:5173/` (the port may vary) with your favorite browser.
+Open `http://localhost:5173/` (the port may vary) with your favorite browser.
 
 
 <br/>
@@ -79,7 +79,7 @@ distribution to **Firebase Hosting**.
 
 - HTML5
 - CSS3
-- JavaScript
+- TypeScript
 - React
 
 
@@ -150,5 +150,15 @@ $ npm run test:e2e
 
 ## Acknowledgments
 
+- [Ant Design](https://ant.design/docs/spec/colors/)
+- [Bootstrap](https://getbootstrap.com/docs/5.0/customize/color/)
+- [Chakra](https://v2.chakra-ui.com/docs/styled-system/theme)
+- [Mantine](https://mantine.dev/theming/colors/)
+- [Material Design 2](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
+- [NextUI](https://nextui.org/docs/customization/colors)
+- [Open Color](https://yeun.github.io/open-color/)
+- [Radix](https://www.radix-ui.com/colors)
+- [React Suite](https://rsuitejs.com/resources/palette/)
+- [Tailwind CSS](https://tailwindcss.com/docs/customizing-colors)
 - [Montserrat | Google Fonts](https://fonts.google.com/specimen/Montserrat)
 - [Material Icons | Google Fonts](https://fonts.google.com/icons)
