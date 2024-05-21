@@ -3,6 +3,8 @@
   "template": "base",
   "includeToPrecache": [
     "/assets",
+    "/logo",
+    "/ui-libs-logos",
     "/index.html"
   ],
   "excludeFilesFromPrecache": []
