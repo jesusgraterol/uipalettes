@@ -42,6 +42,7 @@
   "homepage": "https://github.com/jesusgraterol/uipalettes#readme",
   "dependencies": {
     "browser-style-normalizer": "^1.0.1",
+    "error-message-utils": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "webfont-montserrat": "^1.0.0"
