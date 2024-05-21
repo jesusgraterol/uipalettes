@@ -1,6 +1,6 @@
 {
   "name": "uipalettes",
-  "description": "UIPalettes is a Progressive Web App (PWA) designed to empower software developers. Access a curated library of high-quality color palettes, meticulously crafted to align with leading UI design frameworks and meet stringent Web Content Accessibility Guidelines (WCAG).",
+  "description": "uipalettes is a Progressive Web App (PWA) designed to empower software developers. Access a curated library of high-quality color palettes, meticulously crafted to align with leading UI design frameworks and meet stringent Web Content Accessibility Guidelines (WCAG).",
   "private": false,
   "version": "1.0.0",
   "type": "module",
