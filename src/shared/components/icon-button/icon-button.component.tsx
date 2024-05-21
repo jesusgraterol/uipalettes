@@ -1,23 +1,17 @@
-import { useState } from 'react';
-import { Header } from './header/header.component';
+import { IIConButtonProps } from './types';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
-const App = () => {
-  const [count, setCount] = useState(0);
-
+const IconButton = ({ kind, onClick, children } : IIConButtonProps) => {
+  const bg = kind === 'primary' ? 'bg-primary hover:bg-neutral-900' : 'bg-secondary hover:bg-neutral-700';
+  const btnClasses = `rounded-full p-4 ${bg} active:scale-75`;
   return (
-    <>
-      <Header />
-      <h1 className="text-5xl" >Hello world! {count}</h1>
-      <button className='bg-sky-500 hover:bg-sky-700 text-white p-3' onClick={() => setCount(count + 1)}>
-        <span className='md-icon'>add</span> <span>Hello there!</span>
-      </button>
-    </>
+    <button className={btnClasses} onClick={onClick}>
+      {children}
+    </button>
   );
 };
-
 
 
 
@@ -26,5 +20,5 @@ const App = () => {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export {
-  App,
+  IconButton,
 };

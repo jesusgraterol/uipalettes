@@ -1,6 +1,6 @@
 import { encodeError, extractMessage } from 'error-message-utils';
 import { ISWService } from './types';
-import { ERRORS } from './errors';
+import { ERRORS } from '../../errors';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *

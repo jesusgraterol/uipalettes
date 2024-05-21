@@ -4,7 +4,6 @@
   "includeToPrecache": [
     "/assets",
     "/logo",
-    "/svg-icons",
     "/ui-libs-logos",
     "/index.html"
   ],

@@ -52,9 +52,18 @@
  *                                         GENERAL STYLES                                         *
  ************************************************************************************************ */
 
-/**
- * ...
+ /**
+ * App Header
  */
+/* .app-header {
+  height: 80px;
+  padding: 15px 5px;
+}
+
+.app-header img {
+  max-width: 200px;
+  height: auto;
+} */
 
 
 
@@ -68,9 +77,9 @@
 /*
  * Breakpoint Prefix: 2xl
  */
- @media (min-width: 1536px) {
+@media (min-width: 1536px) {
 
- }
+}
  
  
  
@@ -78,9 +87,9 @@
  /*
   * Breakpoint Prefix: xl
   */
- @media (min-width: 1280px) {
+@media (min-width: 1280px) {
  
- }
+}
  
  
  
@@ -88,9 +97,9 @@
  /*
   * Breakpoint Prefix: lg
   */
- @media (min-width: 1024px) {
- 
- }
+@media (min-width: 1024px) {
+
+}
  
  
  
@@ -98,9 +107,9 @@
  /*
   * Breakpoint Prefix: md
   */
- @media (min-width: 768px) {
- 
- }
+@media (min-width: 768px) {
+
+}
  
  
  
@@ -109,7 +118,7 @@
  /*
   * Breakpoint Prefix: sm
   */
- @media (min-width: 640px) {
- 
- }
+@media (min-width: 640px) {
+
+}
  
