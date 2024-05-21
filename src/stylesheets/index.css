@@ -8,9 +8,6 @@
 /* Typography Font */
 @import url('/node_modules/webfont-montserrat/dist/index.css');
 
-/* Material Icons */
-@import url('modules/material-icons/index.css');
-
 
 
 
@@ -56,11 +53,9 @@
  ************************************************************************************************ */
 
 /**
- * Material Icons
+ * ...
  */
-.md-icon {
-  vertical-align: middle;
-}
+
 
 
 
