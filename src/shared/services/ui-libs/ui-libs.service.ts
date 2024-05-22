@@ -1,8 +1,11 @@
+import { encodeError } from 'error-message-utils';
+import { ERRORS } from '../../errors';
 import {
   IUILibsService,
   IUILibRawRecord,
   IUILibMinifiedRecord,
   IUILibID,
+  IUILibRecord,
 } from './types';
 import RAW_DB from './db.json';
 
@@ -32,6 +35,16 @@ const UILibsServiceFactory = (): IUILibsService => {
    */
   const __buildLogoPath = (id: IUILibID): string => `ui-libs-logos/${id}.png`;
 
+  /**
+   * Processes a raw record and performs all the relevant calculations.
+   * @param raw
+   * @returns IUILibRecord
+   */
+  const __processRecord = (raw: IUILibRawRecord): IUILibRecord => ({
+    ...raw,
+    logo: __buildLogoPath(raw.id),
+  });
+
 
 
 
@@ -39,6 +52,22 @@ const UILibsServiceFactory = (): IUILibsService => {
   /* **********************************************************************************************
    *                                          RETRIEVERS                                          *
    ********************************************************************************************** */
+
+  /**
+   * Retrieves a full and processed record by ID. If no ID is provided, it returns the first record.
+   * @param id
+   * @returns IUILibRecord
+   */
+  const getRecord = (id?: IUILibID): IUILibRecord => {
+    let record: IUILibRawRecord | undefined = __DB[0];
+    if (id) {
+      record = __DB.find((raw) => raw.id === id);
+      if (!record) {
+        throw new Error(encodeError(`The ID '${id}' was not found in the database.`, ERRORS.UNKNOWN_UI_LIB));
+      }
+    }
+    return __processRecord(record);
+  };
 
   /**
    * Retrieves the list of minified records
@@ -60,6 +89,7 @@ const UILibsServiceFactory = (): IUILibsService => {
     // ...
 
     // retrievers
+    getRecord,
     getMinifiedRecords,
   });
 };

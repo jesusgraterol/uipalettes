@@ -1,16 +1,11 @@
-import { IUILibID } from '../../shared/services/ui-libs/types';
+
 
 /* ************************************************************************************************
- *                                             TYPES                                              *
+ *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
 
-/**
- * Desktop Sidenav Props
- * The props object that needs to be passed down.
- */
-interface IDesktopSidenavProps {
-  active: IUILibID,
-  onClick: (id: IUILibID) => void
+interface IHeaderProps {
+  displaySidenav: () => void
 }
 
 
@@ -21,5 +16,5 @@ interface IDesktopSidenavProps {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  IDesktopSidenavProps,
+  IHeaderProps,
 };

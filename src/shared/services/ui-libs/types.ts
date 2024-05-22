@@ -48,6 +48,7 @@ interface IUILibsService {
   // ...
 
   // retrievers
+  getRecord(id?: IUILibID): IUILibRecord,
   getMinifiedRecords(): IUILibMinifiedRecord[],
 }
 

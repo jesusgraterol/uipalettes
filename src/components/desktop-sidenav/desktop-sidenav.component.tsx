@@ -16,21 +16,16 @@ const records = UILibsService.getMinifiedRecords();
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
-const DesktopSidenav = ({ active }: IDesktopSidenavProps) => {
-  const onClick = (id) => {
-    console.log(id);
-  };
-
-
-  return (
-    <section className='hidden xl:block xl:w-72 2xl:w-80 self-stretch bg-white shadow-xl z-0'>
-      {records.map((record) => <SidenavItem key={record.id}
-                                            record={record}
-                                            isActive={active === record.id}
-                                            onClick={() => onClick(record.id)}/>)}
-    </section>
-  );
-};
+const DesktopSidenav = ({ active, onClick }: IDesktopSidenavProps) => (
+  <section role='navigation'
+            aria-label='Application Sidenav'
+            className='hidden xl:block xl:w-72 2xl:w-80 self-stretch bg-white shadow-xl z-0'>
+    {records.map((record) => <SidenavItem key={record.id}
+                                          record={record}
+                                          isActive={active === record.id}
+                                          onClick={() => onClick(record.id)}/>)}
+  </section>
+);
 
 
 
