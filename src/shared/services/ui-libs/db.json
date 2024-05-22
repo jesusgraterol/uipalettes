@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ant-design",
+    "name": "Ant Design",
+    "url": "https://ant.design/"
+  },
+  {
+    "id": "bootstrap",
+    "name": "Bootstrap",
+    "url": "https://getbootstrap.com/"
+  },
+  {
+    "id": "chakra",
+    "name": "Chakra",
+    "url": "https://v2.chakra-ui.com/"
+  },
+  {
+    "id": "mantine",
+    "name": "Mantine",
+    "url": "https://mantine.dev/"
+  },
+  {
+    "id": "material-design-2",
+    "name": "Material Design 2",
+    "url": "https://m2.material.io/"
+  },
+  {
+    "id": "nextui",
+    "name": "NextUI",
+    "url": "https://nextui.org/"
+  },
+  {
+    "id": "open-color",
+    "name": "Open Color",
+    "url": "https://yeun.github.io/open-color/"
+  },
+  {
+    "id": "radix",
+    "name": "Radix",
+    "url": "https://www.radix-ui.com/"
+  },
+  {
+    "id": "react-suite",
+    "name": "React Suite",
+    "url": "https://rsuitejs.com/"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "url": "https://tailwindcss.com/"
+  }
+]
