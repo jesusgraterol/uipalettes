@@ -1,17 +1,19 @@
-import { PropsWithChildren } from 'react';
+import { IUILibID } from '../../shared/services/ui-libs/types';
 
 /* ************************************************************************************************
  *                                             TYPES                                              *
  ************************************************************************************************ */
 
-type IButtonColor = 'primary' | 'secondary' | 'transparent';
-
-type IButtonProps = PropsWithChildren<{
-  color: IButtonColor,
-  rounded?: boolean,
-  className?: string,
-  onClick: () => void
-}>;
+/**
+ * Mobile Sidenav Props
+ * The props object that needs to be passed down.
+ */
+interface IMobileSidenavProps {
+  active: IUILibID,
+  isOpened: boolean,
+  closeSidenav: () => void,
+  activateLib: (id: IUILibID) => void,
+}
 
 
 
@@ -21,6 +23,5 @@ type IButtonProps = PropsWithChildren<{
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  IButtonColor,
-  IButtonProps,
+  IMobileSidenavProps,
 };

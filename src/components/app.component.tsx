@@ -4,6 +4,7 @@ import { IUILibID } from '../shared/services/ui-libs/types';
 import { Header } from './header/header.component';
 import { SubHeader } from './sub-header/sub-header.component';
 import { DesktopSidenav } from './desktop-sidenav/desktop-sidenav.component';
+import { MobileSidenav } from './mobile-sidenav/mobile-sidenav.component';
 import { ScrollTop } from './scroll-top/scroll-top.component';
 
 /* ************************************************************************************************
@@ -14,6 +15,7 @@ const App = () => {
    *                                             STATE                                            *
    ********************************************************************************************** */
   const [active, setActive] = useState(UILibsService.getRecord());
+  const [mobileSidenavOpened, setMobileSidenavOpened] = useState(false);
 
 
 
@@ -24,10 +26,10 @@ const App = () => {
    ********************************************************************************************** */
 
   /**
-   * Displays the mobile sidenav.
+   * Displays or hides the mobile sidenav.
    */
-  const displaySidenav = () => {
-
+  const toggleMobileSidenav = () => {
+    setMobileSidenavOpened(!mobileSidenavOpened);
   };
 
   /**
@@ -47,7 +49,7 @@ const App = () => {
   return (
     <>
       {/* Header */}
-      <Header displaySidenav={displaySidenav} />
+      <Header displaySidenav={toggleMobileSidenav} />
 
       {/* Sub Header */}
       <SubHeader active={active} />
@@ -73,6 +75,12 @@ const App = () => {
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </main>
       </div>
+
+      {/* Mobile Sidenav */}
+      <MobileSidenav active={active.id}
+                      isOpened={mobileSidenavOpened}
+                      closeSidenav={toggleMobileSidenav}
+                      activateLib={activateLib} />
 
       {/* Scroll Top */}
       <ScrollTop />

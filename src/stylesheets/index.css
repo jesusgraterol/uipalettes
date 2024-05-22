@@ -53,6 +53,17 @@
  ************************************************************************************************ */
 
 /**
+ * Body
+ */
+
+/* Body with mobile sidenav */
+body:has(#mobileSidenav.translate-x-0) {
+ overflow-y: hidden;
+}
+
+
+
+/**
  * Buttons
  */
 
