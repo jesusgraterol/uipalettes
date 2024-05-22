@@ -19,7 +19,7 @@ const records = UILibsService.getMinifiedRecords();
 const DesktopSidenav = ({ active, onClick }: IDesktopSidenavProps) => (
   <section role='navigation'
             aria-label='Application Sidenav'
-            className='hidden xl:block xl:w-72 2xl:w-80 self-stretch bg-white shadow-xl z-0'>
+            className='hidden xl:block xl:w-72 2xl:w-80 self-stretch bg-white shadow-4 z-0'>
     {records.map((record) => <SidenavItem key={record.id}
                                           record={record}
                                           isActive={active === record.id}

@@ -8,7 +8,7 @@ const Toolbar = ({ color, dropShadow = false, children }: IToolbarProps) => {
   const colorClass = color === 'primary' ? 'bg-primary' : 'bg-secondary';
 
   // shadow
-  const shadowClass = dropShadow ? 'toolbar-shadow' : 'shadow-none';
+  const shadowClass = dropShadow ? 'shadow-6' : 'shadow-none';
 
   // component
   return (
