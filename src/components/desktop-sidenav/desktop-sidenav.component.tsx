@@ -1,4 +1,5 @@
 import { UILibsService } from '../../shared/services/ui-libs/ui-libs.service';
+import { SidenavItem } from '../../shared/components/sidenav-item/sidenav-item.component';
 import { IDesktopSidenavProps } from './types';
 
 /* ************************************************************************************************
@@ -16,13 +17,17 @@ const records = UILibsService.getMinifiedRecords();
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
 const DesktopSidenav = ({ active }: IDesktopSidenavProps) => {
+  const onClick = (id) => {
+    console.log(id);
+  };
+
+
   return (
-    <section className='hidden xl:block w-80 self-stretch bg-white shadow-xl z-0'>
-      {records.map((record) => (
-        <button key={record.id}>
-          <img src={record.logo} alt={record.name} /> {record.name}
-        </button>
-      ))}
+    <section className='hidden xl:block xl:w-72 2xl:w-80 self-stretch bg-white shadow-xl z-0'>
+      {records.map((record) => <SidenavItem key={record.id}
+                                            record={record}
+                                            isActive={active === record.id}
+                                            onClick={() => onClick(record.id)}/>)}
     </section>
   );
 };
