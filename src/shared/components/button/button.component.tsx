@@ -4,6 +4,11 @@ import { IButtonColor, IButtonProps } from './types';
  *                                            HELPERS                                             *
  ************************************************************************************************ */
 
+/**
+ * Builds the list of classes that will be applied to a button based on the provided color.
+ * @param color
+ * @returns string
+ */
 const getBackgroundClass = (color: IButtonColor) => {
   switch (color) {
     case 'primary':
@@ -16,6 +21,9 @@ const getBackgroundClass = (color: IButtonColor) => {
       throw new Error(`The button color '${color}' is not supported.`);
   }
 };
+
+
+
 
 
 /* ************************************************************************************************

@@ -55,7 +55,9 @@ const MobileSidenav = ({
         <div className='flex items-center p-3'>
           <h3 className='text-xl'>UI Libraries</h3>
           <span className='flex-1'></span>
-          <Button color='transparent' rounded onClick={closeSidenav}><MoveRight color='black' /></Button>
+          <Button color='transparent' rounded onClick={closeSidenav} aria-label='Close Sidenav'>
+            <MoveRight color='black' aria-hidden='true' />
+          </Button>
         </div>
         {records.map((record) => <SidenavItem key={record.id}
                                               record={record}
