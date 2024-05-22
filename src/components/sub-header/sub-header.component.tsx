@@ -1,37 +1,27 @@
-import { Menu, Code } from 'lucide-react';
+import { ExternalLink, ArrowLeft } from 'lucide-react';
 import { Toolbar } from '../../shared/components/toolbar/toolbar.component';
 import { Button } from '../../shared/components/button/button.component';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
-const Header = () => {
+const SubHeader = () => {
   const handleClick = () => {
     console.log('on handleClick');
   };
 
   return (
-    <Toolbar color='primary'>
-      <img className='w-44 sm:w-48 md:w-52 lg:w-56 xl:w-60'
-            src='logo/logo-white.png'
-            alt='uipalettes Logo'/>
-      <span className='flex-1'></span>
-      <Button color='primary' className='hidden sm:flex' onClick={handleClick}>
-          <Code color='white' aria-hidden='true' /> <span>View Source Code</span>
-        </Button>
-      <Button color='primary'
-              rounded={true}
-              className='sm:hidden'
-              aria-label='View Source Code'
-              onClick={handleClick}>
-        <Code color='white' aria-hidden='true' />
+    <Toolbar color='secondary' dropShadow={true}>
+      <Button color='secondary' rounded={true} onClick={handleClick} aria-label='Go Back'>
+        <ArrowLeft color='white' aria-hidden='true' />
       </Button>
-      <Button color='primary'
+      <h1 className='text-white text-lg sm:text-xl font-medium'>Material Design 2</h1>
+      <span className='flex-1'></span>
+      <Button color='secondary'
               rounded={true}
-              className='lg:hidden'
               onClick={handleClick}
-              aria-label='Display Menu'>
-        <Menu color='white' aria-hidden='true' />
+              aria-label='Open UI Library Website'>
+        <ExternalLink color='white' aria-hidden='true' />
       </Button>
     </Toolbar>
   );
@@ -45,5 +35,5 @@ const Header = () => {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export {
-  Header,
+  SubHeader,
 };

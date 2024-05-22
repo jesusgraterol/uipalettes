@@ -13,7 +13,7 @@ const Button = ({
   // background
   const bgClass = color === 'primary'
     ? 'bg-primary hover:bg-neutral-800 focus:bg-neutral-800 active:bg-neutral-800 focus:outline-none focus:ring-1 focus:ring-gray-700 focus:ring-inset'
-    : 'bg-secondary hover:bg-neutral-700 focus:bg-neutral-700 active:bg-neutral-700';
+    : 'bg-secondary hover:bg-neutral-700 focus:bg-neutral-700 active:bg-neutral-700 focus:outline-none focus:ring-1 focus:ring-gray-600 focus:ring-inset';
 
   // rounded
   const roundedClass = rounded ? 'rounded-full' : 'rounded-md';
