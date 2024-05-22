@@ -12,7 +12,7 @@ const Toolbar = ({ color, dropShadow = false, children }: IToolbarProps) => {
 
   // component
   return (
-    <header className={`h-16 sm:h-20 flex justify-around items-center ${colorClass} ${shadowClass} px-2`}>
+    <header className={`h-16 sm:h-20 flex justify-around items-center ${colorClass} ${shadowClass} px-2 z-10 relative`}>
       {children}
     </header>
   );

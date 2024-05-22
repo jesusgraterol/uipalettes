@@ -1,4 +1,9 @@
-import { IUILibsService, IUILibRawRecord, IUILibMinifiedRecord, IUILibID } from './types';
+import {
+  IUILibsService,
+  IUILibRawRecord,
+  IUILibMinifiedRecord,
+  IUILibID,
+} from './types';
 import RAW_DB from './db.json';
 
 /* ************************************************************************************************

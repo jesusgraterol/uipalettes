@@ -28,7 +28,7 @@ const Header = () => {
       </Button>
       <Button color='primary'
               rounded={true}
-              className='lg:hidden'
+              className='xl:hidden'
               onClick={handleClick}
               aria-label='Display Menu'>
         <Menu color='white' aria-hidden='true' />

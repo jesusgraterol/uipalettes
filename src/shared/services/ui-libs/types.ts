@@ -44,7 +44,11 @@ interface IUILibRecord extends IUILibMinifiedRecord {
  * Handles the reading and processing of the raw data so it can be properly displayed to the user.
  */
 interface IUILibsService {
+  // properties
+  // ...
 
+  // retrievers
+  getMinifiedRecords(): IUILibMinifiedRecord[],
 }
 
 

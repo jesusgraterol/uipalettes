@@ -1,4 +1,4 @@
-import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Toolbar } from '../../shared/components/toolbar/toolbar.component';
 import { Button } from '../../shared/components/button/button.component';
 
@@ -12,9 +12,6 @@ const SubHeader = () => {
 
   return (
     <Toolbar color='secondary' dropShadow={true}>
-      <Button color='secondary' rounded={true} onClick={handleClick} aria-label='Go Back'>
-        <ArrowLeft color='white' aria-hidden='true' />
-      </Button>
       <h1 className='text-white text-lg sm:text-xl font-medium'>Material Design 2</h1>
       <span className='flex-1'></span>
       <Button color='secondary'
