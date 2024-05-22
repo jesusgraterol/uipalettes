@@ -52,18 +52,14 @@
  *                                         GENERAL STYLES                                         *
  ************************************************************************************************ */
 
- /**
- * App Header
+/**
+ * Buttons
  */
-/* .app-header {
-  height: 80px;
-  padding: 15px 5px;
-}
 
-.app-header img {
-  max-width: 200px;
-  height: auto;
-} */
+/* Button w/ Icon and Text */
+button.rounded-md:has(svg) span {
+  margin-left: 7px;
+}
 
 
 

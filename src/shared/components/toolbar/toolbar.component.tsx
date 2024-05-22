@@ -1,15 +1,23 @@
-import { IIConButtonProps } from './types';
+import { IToolbarProps } from './types';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
-const IconButton = ({ kind, onClick, children } : IIConButtonProps) => {
-  const bg = kind === 'primary' ? 'bg-primary hover:bg-neutral-900' : 'bg-secondary hover:bg-neutral-700';
-  const btnClasses = `rounded-full p-4 ${bg} active:scale-75`;
+const Toolbar = ({ color, dropShadow = false, children }: IToolbarProps) => {
+  // height
+  const heightClass = 'h-16 sm:h-20';
+
+  // color
+  const colorClass = color === 'primary' ? 'bg-primary' : 'bg-secondary';
+
+  // shadow
+  const shadowClass = dropShadow ? 'shadow-lg' : 'shadow-none';
+
+  // component
   return (
-    <button className={btnClasses} onClick={onClick}>
+    <header className={`${heightClass} flex justify-around items-center ${colorClass} ${shadowClass} px-2`}>
       {children}
-    </button>
+    </header>
   );
 };
 
@@ -20,5 +28,5 @@ const IconButton = ({ kind, onClick, children } : IIConButtonProps) => {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export {
-  IconButton,
+  Toolbar,
 };

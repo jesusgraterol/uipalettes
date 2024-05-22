@@ -1,15 +1,14 @@
-import { PropsWithChildren } from 'react';
+
 
 /* ************************************************************************************************
  *                                             TYPES                                              *
  ************************************************************************************************ */
 
-type IIconButtonKind = 'primary' | 'secondary';
-
-type IIConButtonProps = PropsWithChildren<{
-  kind: IIconButtonKind,
-  onClick: () => void
-}>;
+/**
+ * Component Color
+ * Shared components can be configured to support any of the theme colors.
+ */
+type IComponentColor = 'primary' | 'secondary';
 
 
 
@@ -19,5 +18,5 @@ type IIConButtonProps = PropsWithChildren<{
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  IIConButtonProps,
+  IComponentColor,
 };

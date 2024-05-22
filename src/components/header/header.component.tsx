@@ -1,5 +1,6 @@
 import { Menu, Code } from 'lucide-react';
-import { IconButton } from '../../shared/components/icon-button/icon-button.component';
+import { Toolbar } from '../../shared/components/toolbar/toolbar.component';
+import { Button } from '../../shared/components/button/button.component';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
@@ -10,18 +11,21 @@ const Header = () => {
   };
 
   return (
-    <header className="h-20 flex justify-center items-center bg-primary px-2">
-      <img className='max-w-48 h-auto'
+    <Toolbar color='primary'>
+      <img className='w-44 sm:w-48 md:w-52'
             src='logo/logo-white.png'
             alt='uipalettes Logo'/>
       <span className="flex-1"></span>
-      <IconButton kind='primary' onClick={handleClick}>
+      <Button color='primary' className='hidden sm:flex' onClick={handleClick}>
+          <Code color="white" /> <span>View Code</span>
+        </Button>
+      <Button color='primary' className='sm:hidden' rounded={true} onClick={handleClick}>
         <Code color="white" />
-      </IconButton>
-      <IconButton kind='primary' onClick={handleClick}>
+      </Button>
+      <Button color='primary' rounded={true} onClick={handleClick}>
         <Menu color="white" />
-      </IconButton>
-    </header>
+      </Button>
+    </Toolbar>
   );
 };
 
