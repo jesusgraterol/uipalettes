@@ -12,11 +12,11 @@ import { IButtonColor, IButtonProps } from './types';
 const getBackgroundClass = (color: IButtonColor) => {
   switch (color) {
     case 'primary':
-      return 'bg-primary hover:bg-neutral-800 focus:bg-neutral-800 active:bg-neutral-800 focus:outline-none focus:ring-gray-700 focus:ring-inset';
+      return 'bg-primary hover:bg-neutral-800 focus:bg-neutral-800 active:bg-neutral-800 focus:outline-none';
     case 'secondary':
-      return 'bg-secondary hover:bg-neutral-700 focus:bg-neutral-700 active:bg-neutral-700 focus:outline-none focus:ring-gray-600 focus:ring-inset';
+      return 'bg-secondary hover:bg-neutral-700 focus:bg-neutral-700 active:bg-neutral-700 focus:outline-none';
     case 'transparent':
-      return 'bg-transparent hover:bg-neutral-300 focus:bg-neutral-300 active:bg-neutral-300 focus:outline-none focus:ring-gray-200 focus:ring-inset';
+      return 'bg-transparent hover:bg-neutral-300 focus:bg-neutral-300 active:bg-neutral-300 focus:outline-none';
     default:
       throw new Error(`The button color '${color}' is not supported.`);
   }
