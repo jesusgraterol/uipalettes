@@ -39,10 +39,16 @@ const SWServiceFactory = (): ISWService => {
             serviceWorker = registration.active;
           }
           if (serviceWorker) {
+            // store the worker's instance
             __worker = serviceWorker;
+
+            // update the instance whenever the state changes
             serviceWorker.addEventListener('statechange', (e) => {
               __worker = <ServiceWorker>e.target;
             });
+
+            // store the app installer
+            // ...
           } else {
             console.log(registration);
             __registrationError = encodeError('The Service Worker\'s Registration is empty', ERRORS.EMPTY_SW_REGISTRATION);

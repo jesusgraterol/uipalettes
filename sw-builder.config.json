@@ -3,6 +3,7 @@
   "template": "base",
   "includeToPrecache": [
     "/assets",
+    "/installer",
     "/logo",
     "/ui-libs-logos",
     "/index.html"
