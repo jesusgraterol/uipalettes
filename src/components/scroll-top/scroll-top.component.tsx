@@ -50,7 +50,7 @@ const ScrollTop = () => {
   return (
       <Button color='primary'
               rounded
-              className={`fixed bottom-5 right-5 z-10 transition-transform duration-500 ${visible ? 'translate-y-0' : 'translate-y-20'}`}
+              className={`fixed bottom-5 right-5 z-10 shadow-8 transition-transform duration-500 ${visible ? 'translate-y-0' : 'translate-y-20'}`}
               onClick={scrollToTop}
               aria-label='Scroll to Top'>
         <MoveUp color='white' aria-hidden='true'/>
