@@ -5,39 +5,64 @@
  ************************************************************************************************ */
 
 /**
- * UI Lib ID
+ * Lib ID
  * Each library has a unique ID which can also be used to map the logos.
  */
-type IUILibID = 'ant-design' | 'bootstrap' | 'chakra' | 'mantine' | 'material-design-2' | 'nextui' |
+type ILibID = 'ant-design' | 'bootstrap' | 'chakra' | 'mantine' | 'material-design-2' | 'nextui' |
 'open-color' | 'radix' | 'react-suite' | 'tailwindcss';
 
-/**
- * UI Lib Raw Record
- * The raw object that is stored in the local database.
- */
-interface IUILibRawRecord {
-  id: IUILibID,
-  name: string,
-  url: string,
-}
+
 
 /**
- * UI Lib Minified Record
+ * Minified Record
  * The essentials so the libraries can be listed.
  */
-interface IUILibMinifiedRecord {
-  id: IUILibID,
-  name: string,
-  logo: string,
+interface IMinifiedRecord {
+  id: ILibID;
+  name: string;
+}
+
+
+
+/**
+ * Contrast Score
+ * The level obtained by appliying the WCAG formula.
+ */
+type IContrastScore = 'A' | 'AA' | 'AAA';
+
+/**
+ * Hue
+ * The object that contains the core data for a color's hue.
+ */
+interface IHue {
+  name: string;
+  hex: string;
+  contrastRatio: string;
+  normalScore: IContrastScore;
+  largeScore: IContrastScore;
 }
 
 /**
- * UI Lib Record
+ * Palette
+ * The set of hues that comprise a color palette.
+ */
+interface IPalette {
+  name: string;
+  hues: IHue[];
+}
+
+/**
+ * Record
  * The complete record of a UI Library which also includes the supported colors.
  */
-interface IUILibRecord extends IUILibMinifiedRecord {
-  url: string
+interface IRecord {
+  id: ILibID;
+  name: string;
+  url: string;
+  palettes: IPalette[];
 }
+
+
 
 /**
  * UI Libs Service
@@ -47,9 +72,12 @@ interface IUILibsService {
   // properties
   // ...
 
+  // misc helpers
+  buildLogoPath(id: ILibID): string,
+
   // retrievers
-  getRecord(id?: IUILibID): IUILibRecord,
-  getMinifiedRecords(): IUILibMinifiedRecord[],
+  getRecord(id?: ILibID): IRecord,
+  getMinifiedRecords(): IMinifiedRecord[],
 }
 
 
@@ -59,9 +87,8 @@ interface IUILibsService {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  IUILibID,
-  IUILibRawRecord,
-  IUILibMinifiedRecord,
-  IUILibRecord,
+  ILibID,
+  IMinifiedRecord,
+  IRecord,
   IUILibsService,
 };

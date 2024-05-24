@@ -1,17 +1,12 @@
-import { IMinifiedRecord } from '../../services/ui-libs/types';
+import { IUILibRecord } from '../../shared/services/ui-libs/types';
 
 /* ************************************************************************************************
  *                                             TYPES                                              *
  ************************************************************************************************ */
 
-
-interface ISidenavItemProps {
-  record: IMinifiedRecord,
-  isActive: boolean,
-  onClick: () => void
+interface IPaletteProps {
+  active: IUILibRecord
 }
-
-
 
 
 
@@ -19,5 +14,5 @@ interface ISidenavItemProps {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  ISidenavItemProps,
+  IPaletteProps,
 };

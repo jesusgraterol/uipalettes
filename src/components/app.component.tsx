@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { UILibsService } from '../shared/services/ui-libs/ui-libs.service';
-import { IUILibID } from '../shared/services/ui-libs/types';
+import { ILibID } from '../shared/services/ui-libs/types';
 import { Header } from './header/header.component';
 import { SubHeader } from './sub-header/sub-header.component';
 import { DesktopSidenav } from './desktop-sidenav/desktop-sidenav.component';
 import { MobileSidenav } from './mobile-sidenav/mobile-sidenav.component';
+import { Palette } from './palette/palette.component';
 import { Installer } from './installer/installer.component';
 import { ScrollTop } from './scroll-top/scroll-top.component';
 
@@ -38,7 +39,7 @@ const App = () => {
    * @param id
    * @returns void
    */
-  const activateLib = (id: IUILibID) => setActive(UILibsService.getRecord(id));
+  const activateLib = (id: ILibID) => setActive(UILibsService.getRecord(id));
 
 
 
@@ -62,56 +63,7 @@ const App = () => {
 
         {/* Content */}
         <main className='flex-1 items-start h-full p-3 sm:p-4'>
-          <h1 className="text-5xl" >Hello world!</h1>
-          <button className='bg-sky-500 hover:bg-sky-700 text-white p-3'>
-            <span className='md-icon'>add</span> <span>Hello there!</span>
-          </button>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis facere quidem corporis quam soluta ea? Dolorum corrupti ab ut tempore ipsa, dignissimos quae quaerat sunt ea maxime, unde modi!</p>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <Palette active={active} />
         </main>
       </div>
 
@@ -121,11 +73,11 @@ const App = () => {
                       closeSidenav={toggleMobileSidenav}
                       activateLib={activateLib} />
 
+      {/* Installer */}
+      <Installer />
+
       {/* Scroll Top */}
       <ScrollTop />
-
-{/* Installer */}
-<Installer />
     </>
   );
 };

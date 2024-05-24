@@ -2,10 +2,9 @@ import { encodeError } from 'error-message-utils';
 import { ERRORS } from '../../errors';
 import {
   IUILibsService,
-  IUILibRawRecord,
-  IUILibMinifiedRecord,
-  IUILibID,
-  IUILibRecord,
+  IMinifiedRecord,
+  ILibID,
+  IRecord,
 } from './types';
 import RAW_DB from './db.json';
 
@@ -18,7 +17,7 @@ const UILibsServiceFactory = (): IUILibsService => {
    ********************************************************************************************** */
 
   // copy of the raw database
-  const __DB = <IUILibRawRecord[]>RAW_DB;
+  const __DB = <IRecord[]>RAW_DB;
 
 
 
@@ -33,16 +32,16 @@ const UILibsServiceFactory = (): IUILibsService => {
    * @param id
    * @returns string
    */
-  const __buildLogoPath = (id: IUILibID): string => `ui-libs-logos/${id}.png`;
+  const buildLogoPath = (id: ILibID): string => `ui-libs-logos/${id}.png`;
 
   /**
    * Processes a raw record and performs all the relevant calculations.
    * @param raw
    * @returns IUILibRecord
    */
-  const __processRecord = (raw: IUILibRawRecord): IUILibRecord => ({
+  const __processRecord = (raw: IRecord): IRecord => ({
     ...raw,
-    logo: __buildLogoPath(raw.id),
+    // @TODO
   });
 
 
@@ -56,10 +55,10 @@ const UILibsServiceFactory = (): IUILibsService => {
   /**
    * Retrieves a full and processed record by ID. If no ID is provided, it returns the first record.
    * @param id
-   * @returns IUILibRecord
+   * @returns IRecord
    */
-  const getRecord = (id?: IUILibID): IUILibRecord => {
-    let record: IUILibRawRecord | undefined = __DB[0];
+  const getRecord = (id?: ILibID): IRecord => {
+    let record: IRecord | undefined = __DB[0];
     if (id) {
       record = __DB.find((raw) => raw.id === id);
       if (!record) {
@@ -71,10 +70,10 @@ const UILibsServiceFactory = (): IUILibsService => {
 
   /**
    * Retrieves the list of minified records
-   * @returns IUILibMinifiedRecord[]
+   * @returns IMinifiedRecord[]
    */
-  const getMinifiedRecords = (): IUILibMinifiedRecord[] => (
-    __DB.map((record) => ({ id: record.id, name: record.name, logo: __buildLogoPath(record.id) }))
+  const getMinifiedRecords = (): IMinifiedRecord[] => __DB.map(
+    (record) => ({ id: record.id, name: record.name }),
   );
 
 
@@ -87,6 +86,9 @@ const UILibsServiceFactory = (): IUILibsService => {
   return Object.freeze({
     // properties
     // ...
+
+    // misc helpers
+    buildLogoPath,
 
     // retrievers
     getRecord,
