@@ -11,7 +11,7 @@ const SWServiceFactory = (): ISWService => {
    ********************************************************************************************** */
 
   // if enabled, it will display logs throughout all processes and events
-  const __DEBUG: boolean = true;
+  const __DEBUG: boolean = false;
 
   // service worker's registration
   let __worker: ServiceWorker | undefined;
