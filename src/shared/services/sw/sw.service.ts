@@ -1,6 +1,6 @@
 import { encodeError, extractMessage } from 'error-message-utils';
-import { IInstallerPromptOutcome, IBeforeInstallPromptEvent, ISWService } from './types';
 import { ERRORS } from '../../errors';
+import { IInstallationPromptOutcome, IBeforeInstallPromptEvent, ISWService } from './types';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
@@ -10,13 +10,16 @@ const SWServiceFactory = (): ISWService => {
    *                                          PROPERTIES                                          *
    ********************************************************************************************** */
 
+  // if enabled, it will display logs throughout all processes and events
+  const __DEBUG: boolean = true;
+
   // service worker's registration
   let __worker: ServiceWorker | undefined;
   let __registrationError: string | undefined;
 
-  // app installer
-  let __installer: IBeforeInstallPromptEvent | undefined;
-  let __installerPromptOutcome: IInstallerPromptOutcome | undefined;
+  // app installation
+  let __installationPrompt: IBeforeInstallPromptEvent | undefined;
+  let __installationPromptOutcome: IInstallationPromptOutcome | undefined;
   let __appInstalled: boolean | undefined;
   const __runningInstalledApp: boolean = window.matchMedia('(display-mode: standalone)').matches;
 
@@ -37,6 +40,7 @@ const SWServiceFactory = (): ISWService => {
     window.addEventListener(
       'appinstalled',
       () => {
+        if (__DEBUG) console.log('Event Fired: appinstalled');
         __appInstalled = true;
       },
       { once: true },
@@ -51,15 +55,16 @@ const SWServiceFactory = (): ISWService => {
    * https://web.dev/learn/pwa/installation-prompt
    * https://stackoverflow.com/questions/50332119/is-it-possible-to-make-an-in-app-button-that-triggers-the-pwa-add-to-home-scree
    */
-  const __initializeAppInstaller = () => {
+  const __initializeAppInstallation = () => {
     window.addEventListener(
       'beforeinstallprompt',
       (e: IBeforeInstallPromptEvent) => {
+        if (__DEBUG) console.log('Event Fired: beforeinstallprompt', e);
         // prevent the mini-infobar from appearing on mobile
         e.preventDefault();
 
         // store the event
-        __installer = e;
+        __installationPrompt = e;
 
         // listen to the installation state
         __subscribeToInstallationState();
@@ -78,13 +83,18 @@ const SWServiceFactory = (): ISWService => {
    * https://web.dev/learn/pwa/installation-prompt
    */
   const installApp = async (): Promise<void> => {
-    if (__installer && typeof __installer.prompt === 'function') {
-      __installer.prompt();
-      const { outcome } = await __installer.userChoice;
-      __installerPromptOutcome = outcome;
+    if (__installationPrompt && typeof __installationPrompt.prompt === 'function') {
+      try {
+        __installationPrompt.prompt();
+        const choice = await __installationPrompt.userChoice;
+        __installationPromptOutcome = choice.outcome;
+        if (__DEBUG) console.log('Action Fired: installApp', choice);
 
-      // the installer prompt can only be used once
-      __installer = undefined;
+        // the installation prompt can only be used once
+        __installationPrompt = undefined;
+      } catch (e) {
+        throw new Error(encodeError(e, ERRORS.UNKNOWN_INSTALLATION_PROMPT_ERROR));
+      }
     } else {
       throw new Error(encodeError('The app cannot be installed because the prompt event was not provided by the browser.', ERRORS.NO_APP_INSTALLER));
     }
@@ -109,10 +119,13 @@ const SWServiceFactory = (): ISWService => {
         .then((registration: ServiceWorkerRegistration) => {
           let serviceWorker: ServiceWorker | undefined;
           if (registration.installing) {
+            if (__DEBUG) console.log('Event Fired: serviceWorker.registration.installing', registration);
             serviceWorker = registration.installing;
           } else if (registration.waiting) {
+            if (__DEBUG) console.log('Event Fired: serviceWorker.registration.waiting', registration);
             serviceWorker = registration.waiting;
           } else if (registration.active) {
+            if (__DEBUG) console.log('Event Fired: serviceWorker.registration.active', registration);
             serviceWorker = registration.active;
           }
           if (serviceWorker) {
@@ -121,11 +134,12 @@ const SWServiceFactory = (): ISWService => {
 
             // update the instance whenever the state changes
             serviceWorker.addEventListener('statechange', (e) => {
+              if (__DEBUG) console.log('Event Fired: serviceWorker.registration.statechange', e);
               __worker = <ServiceWorker>e.target;
             });
 
-            // init the app's installer
-            __initializeAppInstaller();
+            // init the app's installation
+            __initializeAppInstallation();
           } else {
             console.log(registration);
             __registrationError = encodeError('The Service Worker\'s Registration is empty', ERRORS.EMPTY_SW_REGISTRATION);
@@ -155,8 +169,8 @@ const SWServiceFactory = (): ISWService => {
     get registrationError() {
       return __registrationError;
     },
-    get installerPromptOutcome() {
-      return __installerPromptOutcome;
+    get installationPromptOutcome() {
+      return __installationPromptOutcome;
     },
     get appInstalled() {
       return __appInstalled;
@@ -165,7 +179,7 @@ const SWServiceFactory = (): ISWService => {
       return __runningInstalledApp;
     },
 
-    // app installer
+    // app installation
     installApp,
 
     // service worker registration

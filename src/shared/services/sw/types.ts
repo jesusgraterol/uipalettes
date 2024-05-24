@@ -5,10 +5,19 @@
  ************************************************************************************************ */
 
 /**
- * Installer Prompt Outcome
+ * Installation Prompt Outcome
  * The action taken by the user once the installation prompt is displayed.
  */
-type IInstallerPromptOutcome = 'accepted' | 'dismissed';
+type IInstallationPromptOutcome = 'accepted' | 'dismissed';
+
+/**
+ * User Choice
+ * The result of the user's interaction with the installation prompt.
+ */
+interface IUserChoice {
+  outcome: IInstallationPromptOutcome;
+  platform: string;
+}
 
 /**
  * The BeforeInstallPromptEvent is fired at the Window.onbeforeinstallprompt handler
@@ -27,10 +36,7 @@ interface IBeforeInstallPromptEvent extends Event {
   readonly platforms: Array<string>;
 
   // returns a Promise that resolves to a DOMString containing either "accepted" or "dismissed".
-  readonly userChoice: Promise<{
-    outcome: IInstallerPromptOutcome,
-    platform: string
-  }>;
+  readonly userChoice: Promise<IUserChoice>;
 
   // allows a developer to show the install prompt at a time of their own choosing.
   prompt(): Promise<void>;
@@ -55,11 +61,11 @@ interface ISWService {
   // properties
   worker: ServiceWorker | undefined;
   registrationError: string | undefined;
-  installerPromptOutcome: IInstallerPromptOutcome | undefined;
+  installationPromptOutcome: IInstallationPromptOutcome | undefined;
   appInstalled: boolean | undefined;
   runningInstalledApp: boolean;
 
-  // app installer
+  // app installation
   installApp(): Promise<void>;
 
   // service worker registration
@@ -73,7 +79,8 @@ interface ISWService {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export type {
-  IInstallerPromptOutcome,
+  IInstallationPromptOutcome,
+  IUserChoice,
   IBeforeInstallPromptEvent,
   ISWService,
 };
