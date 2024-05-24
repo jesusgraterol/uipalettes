@@ -66,6 +66,7 @@ interface ISWService {
   runningInstalledApp: boolean;
 
   // app installation
+  canAppBeInstalled(): boolean,
   installApp(): Promise<void>;
 
   // service worker registration

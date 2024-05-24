@@ -74,6 +74,16 @@ const SWServiceFactory = (): ISWService => {
   };
 
   /**
+   * Evaluates if the application can be installed on the device.
+   * @returns boolean
+   */
+  const canAppBeInstalled = (): boolean => (
+    __installationPrompt !== undefined
+    && typeof __installationPrompt.prompt === 'function'
+    && !__runningInstalledApp
+  );
+
+  /**
    * Attempts to install the application on the user's device and stores the prompt's outcome.
    * @returns Promise<void>
    * @throws
@@ -180,6 +190,7 @@ const SWServiceFactory = (): ISWService => {
     },
 
     // app installation
+    canAppBeInstalled,
     installApp,
 
     // service worker registration
