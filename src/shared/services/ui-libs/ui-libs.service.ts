@@ -27,7 +27,8 @@ const UILibsServiceFactory = (): IUILibsService => {
   // copy of the raw database
   const __DB = <IRecord[]>RAW_DB;
 
-
+  // cached processed records
+  const __cachedRecords: { [recordID: string]: IRecord } = {};
 
 
 
@@ -128,14 +129,26 @@ const UILibsServiceFactory = (): IUILibsService => {
    * @returns IRecord
    */
   const getRecord = (id?: ILibID): IRecord => {
+    let record: IRecord | undefined;
     if (id) {
-      const record = __DB.find((raw) => raw.id === id);
+      // check if it is already cached
+      if (__cachedRecords[id]) {
+        return __cachedRecords[id];
+      }
+
+      // otherwise, scan the DB
+      record = __DB.find((raw) => raw.id === id);
       if (!record) {
         throw new Error(encodeError(`The ID '${id}' was not found in the database.`, ERRORS.UNKNOWN_UI_LIB));
       }
-      return __processRecord(record);
+    } else {
+      [record] = __DB;
     }
-    return __processRecord(__DB[0]);
+
+    // process the record
+    record = __processRecord(record);
+    __cachedRecords[record.id] = record;
+    return record;
   };
 
   /**
