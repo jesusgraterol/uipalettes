@@ -9,7 +9,7 @@ import { SWService } from '../../shared/services/sw/sw.service';
 const SW_INSTALLATION_DURATION: number = 3;
 
 // the number of seconds the installer can be displayed for
-const DURATION: number = 5 * 1000;
+const DURATION: number = 3 * 1000;
 
 
 
