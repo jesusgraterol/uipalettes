@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -r -f dist && tsc && vite build && sw-builder",
+    "build": "tsc && vite build && sw-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "echo \"Error: tests are executed with  npm run test:(e2e|integration|unit)\" && exit 1",
