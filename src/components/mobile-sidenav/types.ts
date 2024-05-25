@@ -1,4 +1,4 @@
-import { IUILibID } from '../../shared/services/ui-libs/types';
+import { ILibID } from '../../shared/services/ui-libs/types';
 
 /* ************************************************************************************************
  *                                             TYPES                                              *
@@ -9,10 +9,10 @@ import { IUILibID } from '../../shared/services/ui-libs/types';
  * The props object that needs to be passed down.
  */
 interface IMobileSidenavProps {
-  active: IUILibID,
+  active: ILibID,
   isOpened: boolean,
   closeSidenav: () => void,
-  activateLib: (id: IUILibID) => void,
+  activateLib: (id: ILibID) => void,
 }
 
 

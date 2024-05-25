@@ -1,5 +1,5 @@
 import { MoveRight } from 'lucide-react';
-import { IUILibID } from '../../shared/services/ui-libs/types';
+import { ILibID } from '../../shared/services/ui-libs/types';
 import { UILibsService } from '../../shared/services/ui-libs/ui-libs.service';
 import { Button } from '../../shared/components/button/button.component';
 import { SidenavItem } from '../../shared/components/sidenav-item/sidenav-item.component';
@@ -33,7 +33,7 @@ const MobileSidenav = ({
    * Activates a given lib and closes the sidenav.
    * @param id
    */
-  const __activateLib = (id: IUILibID) => {
+  const __activateLib = (id: ILibID) => {
     closeSidenav();
     activateLib(id);
   };

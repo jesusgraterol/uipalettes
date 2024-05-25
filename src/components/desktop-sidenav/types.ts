@@ -1,4 +1,4 @@
-import { IUILibID } from '../../shared/services/ui-libs/types';
+import { ILibID } from '../../shared/services/ui-libs/types';
 
 /* ************************************************************************************************
  *                                             TYPES                                              *
@@ -9,8 +9,8 @@ import { IUILibID } from '../../shared/services/ui-libs/types';
  * The props object that needs to be passed down.
  */
 interface IDesktopSidenavProps {
-  active: IUILibID,
-  onClick: (id: IUILibID) => void
+  active: ILibID,
+  onClick: (id: ILibID) => void
 }
 
 

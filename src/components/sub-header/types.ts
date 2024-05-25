@@ -1,11 +1,11 @@
-import { IUILibRecord } from '../../shared/services/ui-libs/types';
+import { IRecord } from '../../shared/services/ui-libs/types';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
 
 interface ISubHeaderProps {
-  active: IUILibRecord
+  active: IRecord
 }
 
 
