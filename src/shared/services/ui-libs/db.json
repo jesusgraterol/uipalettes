@@ -5,7 +5,7 @@
     "url": "https://ant.design/",
     "palettes": [
       {
-        "name": "D. Red",
+        "name": "D.Red",
         "hues": [
           { "name": "H01", "hex": "#fff1f0" },
           { "name": "H02", "hex": "#ffccc7" },
@@ -35,7 +35,7 @@
         ]
       },
       {
-        "name": "S. Orange",
+        "name": "S.Orange",
         "hues": [
           { "name": "H01", "hex": "#fff7e6" },
           { "name": "H02", "hex": "#ffe7ba" },
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "name": "C. Gold",
+        "name": "C.Gold",
         "hues": [
           { "name": "H01", "hex": "#fffbe6" },
           { "name": "H02", "hex": "#fff1b8" },
@@ -62,6 +62,144 @@
           { "name": "H08", "hex": "#ad6800" },
           { "name": "H09", "hex": "#874d00" },
           { "name": "H10", "hex": "#613400" }
+        ]
+      },
+      {
+        "name": "S.Yellow",
+        "hues": [
+          { "name": "H01", "hex": "#feffe6" },
+          { "name": "H02", "hex": "#ffffb8" },
+          { "name": "H03", "hex": "#fffb8f" },
+          { "name": "H04", "hex": "#fff566" },
+          { "name": "H05", "hex": "#ffec3d" },
+          { "name": "H06", "hex": "#fadb14" },
+          { "name": "H07", "hex": "#d4b106" },
+          { "name": "H08", "hex": "#ad8b00" },
+          { "name": "H09", "hex": "#876800" },
+          { "name": "H10", "hex": "#614700" }
+        ]
+      },
+      {
+        "name": "Lime",
+        "hues": [
+          { "name": "H01", "hex": "#fcffe6" },
+          { "name": "H02", "hex": "#f4ffb8" },
+          { "name": "H03", "hex": "#eaff8f" },
+          { "name": "H04", "hex": "#d3f261" },
+          { "name": "H05", "hex": "#bae637" },
+          { "name": "H06", "hex": "#a0d911" },
+          { "name": "H07", "hex": "#7cb305" },
+          { "name": "H08", "hex": "#5b8c00" },
+          { "name": "H09", "hex": "#3f6600" },
+          { "name": "H10", "hex": "#254000" }
+        ]
+      },
+      {
+        "name": "P.Green",
+        "hues": [
+          { "name": "H01", "hex": "#f6ffed" },
+          { "name": "H02", "hex": "#d9f7be" },
+          { "name": "H03", "hex": "#b7eb8f" },
+          { "name": "H04", "hex": "#95de64" },
+          { "name": "H05", "hex": "#73d13d" },
+          { "name": "H06", "hex": "#52c41a" },
+          { "name": "H07", "hex": "#389e0d" },
+          { "name": "H08", "hex": "#237804" },
+          { "name": "H09", "hex": "#135200" },
+          { "name": "H10", "hex": "#092b00" }
+        ]
+      },
+      {
+        "name": "Cyan",
+        "hues": [
+          { "name": "H01", "hex": "#e6fffb" },
+          { "name": "H02", "hex": "#b5f5ec" },
+          { "name": "H03", "hex": "#87e8de" },
+          { "name": "H04", "hex": "#5cdbd3" },
+          { "name": "H05", "hex": "#36cfc9" },
+          { "name": "H06", "hex": "#13c2c2" },
+          { "name": "H07", "hex": "#08979c" },
+          { "name": "H08", "hex": "#006d75" },
+          { "name": "H09", "hex": "#00474f" },
+          { "name": "H10", "hex": "#002329" }
+        ]
+      },
+      {
+        "name": "D.Blue",
+        "hues": [
+          { "name": "H01", "hex": "#e6f4ff" },
+          { "name": "H02", "hex": "#bae0ff" },
+          { "name": "H03", "hex": "#91caff" },
+          { "name": "H04", "hex": "#69b1ff" },
+          { "name": "H05", "hex": "#4096ff" },
+          { "name": "H06", "hex": "#1677ff" },
+          { "name": "H07", "hex": "#0958d9" },
+          { "name": "H08", "hex": "#003eb3" },
+          { "name": "H09", "hex": "#002c8c" },
+          { "name": "H10", "hex": "#001d66" }
+        ]
+      },
+      {
+        "name": "G.Blue",
+        "hues": [
+          { "name": "H01", "hex": "#f0f5ff" },
+          { "name": "H02", "hex": "#d6e4ff" },
+          { "name": "H03", "hex": "#adc6ff" },
+          { "name": "H04", "hex": "#85a5ff" },
+          { "name": "H05", "hex": "#597ef7" },
+          { "name": "H06", "hex": "#2f54eb" },
+          { "name": "H07", "hex": "#1d39c4" },
+          { "name": "H08", "hex": "#10239e" },
+          { "name": "H09", "hex": "#061178" },
+          { "name": "H10", "hex": "#030852" }
+        ]
+      },
+      {
+        "name": "G.Purple",
+        "hues": [
+          { "name": "H01", "hex": "#f9f0ff" },
+          { "name": "H02", "hex": "#efdbff" },
+          { "name": "H03", "hex": "#d3adf7" },
+          { "name": "H04", "hex": "#b37feb" },
+          { "name": "H05", "hex": "#9254de" },
+          { "name": "H06", "hex": "#722ed1" },
+          { "name": "H07", "hex": "#531dab" },
+          { "name": "H08", "hex": "#391085" },
+          { "name": "H09", "hex": "#22075e" },
+          { "name": "H10", "hex": "#120338" }
+        ]
+      },
+      {
+        "name": "Magenta",
+        "hues": [
+          { "name": "H01", "hex": "#fff0f6" },
+          { "name": "H02", "hex": "#ffd6e7" },
+          { "name": "H03", "hex": "#ffadd2" },
+          { "name": "H04", "hex": "#ff85c0" },
+          { "name": "H05", "hex": "#f759ab" },
+          { "name": "H06", "hex": "#eb2f96" },
+          { "name": "H07", "hex": "#c41d7f" },
+          { "name": "H08", "hex": "#9e1068" },
+          { "name": "H09", "hex": "#780650" },
+          { "name": "H10", "hex": "#520339" }
+        ]
+      },
+      {
+        "name": "Neutral",
+        "hues": [
+          { "name": "H01", "hex": "#ffffff" },
+          { "name": "H02", "hex": "#fafafa" },
+          { "name": "H03", "hex": "#f5f5f5" },
+          { "name": "H04", "hex": "#f0f0f0" },
+          { "name": "H05", "hex": "#d9d9d9" },
+          { "name": "H06", "hex": "#bfbfbf" },
+          { "name": "H07", "hex": "#8c8c8c" },
+          { "name": "H08", "hex": "#595959" },
+          { "name": "H09", "hex": "#434343" },
+          { "name": "H10", "hex": "#262626" },
+          { "name": "H11", "hex": "#1f1f1f" },
+          { "name": "H12", "hex": "#141414" },
+          { "name": "H13", "hex": "#000000" }
         ]
       }
     ]
