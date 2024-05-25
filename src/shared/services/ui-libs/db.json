@@ -1088,18 +1088,198 @@
     "url": "https://yeun.github.io/open-color/",
     "palettes": [
       {
-        "name": "",
+        "name": "Gray",
         "hues": [
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" },
-          { "name": "", "hex": "" }
+          { "name": "H0", "hex": "#f8f9fa" },
+          { "name": "H1", "hex": "#f1f3f5" },
+          { "name": "H2", "hex": "#e9ecef" },
+          { "name": "H3", "hex": "#dee2e6" },
+          { "name": "H4", "hex": "#ced4da" },
+          { "name": "H5", "hex": "#adb5bd" },
+          { "name": "H6", "hex": "#868e96" },
+          { "name": "H7", "hex": "#495057" },
+          { "name": "H8", "hex": "#343a40" },
+          { "name": "H9", "hex": "#212529" }
+        ]
+      },
+      {
+        "name": "Red",
+        "hues": [
+          { "name": "H0", "hex": "#fff5f5" },
+          { "name": "H1", "hex": "#ffe3e3" },
+          { "name": "H2", "hex": "#ffc9c9" },
+          { "name": "H3", "hex": "#ffa8a8" },
+          { "name": "H4", "hex": "#ff8787" },
+          { "name": "H5", "hex": "#ff6b6b" },
+          { "name": "H6", "hex": "#fa5252" },
+          { "name": "H7", "hex": "#f03e3e" },
+          { "name": "H8", "hex": "#e03131" },
+          { "name": "H9", "hex": "#c92a2a" }
+        ]
+      },
+      {
+        "name": "Pink",
+        "hues": [
+          { "name": "H0", "hex": "#fff0f6" },
+          { "name": "H1", "hex": "#ffdeeb" },
+          { "name": "H2", "hex": "#fcc2d7" },
+          { "name": "H3", "hex": "#faa2c1" },
+          { "name": "H4", "hex": "#f783ac" },
+          { "name": "H5", "hex": "#f06595" },
+          { "name": "H6", "hex": "#e64980" },
+          { "name": "H7", "hex": "#d6336c" },
+          { "name": "H8", "hex": "#c2255c" },
+          { "name": "H9", "hex": "#a61e4d" }
+        ]
+      },
+      {
+        "name": "Grape",
+        "hues": [
+          { "name": "H0", "hex": "#f8f0fc" },
+          { "name": "H1", "hex": "#f3d9fa" },
+          { "name": "H2", "hex": "#eebefa" },
+          { "name": "H3", "hex": "#e599f7" },
+          { "name": "H4", "hex": "#da77f2" },
+          { "name": "H5", "hex": "#cc5de8" },
+          { "name": "H6", "hex": "#be4bdb" },
+          { "name": "H7", "hex": "#ae3ec9" },
+          { "name": "H8", "hex": "#9c36b5" },
+          { "name": "H9", "hex": "#862e9c" }
+        ]
+      },
+      {
+        "name": "Violet",
+        "hues": [
+          { "name": "H0", "hex": "#f3f0ff" },
+          { "name": "H1", "hex": "#e5dbff" },
+          { "name": "H2", "hex": "#d0bfff" },
+          { "name": "H3", "hex": "#b197fc" },
+          { "name": "H4", "hex": "#9775fa" },
+          { "name": "H5", "hex": "#845ef7" },
+          { "name": "H6", "hex": "#7950f2" },
+          { "name": "H7", "hex": "#7048e8" },
+          { "name": "H8", "hex": "#6741d9" },
+          { "name": "H9", "hex": "#5f3dc4" }
+        ]
+      },
+      {
+        "name": "Indigo",
+        "hues": [
+          { "name": "H0", "hex": "#edf2ff" },
+          { "name": "H1", "hex": "#dbe4ff" },
+          { "name": "H2", "hex": "#bac8ff" },
+          { "name": "H3", "hex": "#91a7ff" },
+          { "name": "H4", "hex": "#748ffc" },
+          { "name": "H5", "hex": "#5c7cfa" },
+          { "name": "H6", "hex": "#4c6ef5" },
+          { "name": "H7", "hex": "#4263eb" },
+          { "name": "H8", "hex": "#3b5bdb" },
+          { "name": "H9", "hex": "#364fc7" }
+        ]
+      },
+      {
+        "name": "Blue",
+        "hues": [
+          { "name": "H0", "hex": "#e7f5ff" },
+          { "name": "H1", "hex": "#d0ebff" },
+          { "name": "H2", "hex": "#a5d8ff" },
+          { "name": "H3", "hex": "#74c0fc" },
+          { "name": "H4", "hex": "#4dabf7" },
+          { "name": "H5", "hex": "#339af0" },
+          { "name": "H6", "hex": "#228be6" },
+          { "name": "H7", "hex": "#1c7ed6" },
+          { "name": "H8", "hex": "#1971c2" },
+          { "name": "H9", "hex": "#1864ab" }
+        ]
+      },
+      {
+        "name": "Cyan",
+        "hues": [
+          { "name": "H0", "hex": "#e3fafc" },
+          { "name": "H1", "hex": "#c5f6fa" },
+          { "name": "H2", "hex": "#99e9f2" },
+          { "name": "H3", "hex": "#66d9e8" },
+          { "name": "H4", "hex": "#3bc9db" },
+          { "name": "H5", "hex": "#22b8cf" },
+          { "name": "H6", "hex": "#15aabf" },
+          { "name": "H7", "hex": "#1098ad" },
+          { "name": "H8", "hex": "#0c8599" },
+          { "name": "H9", "hex": "#0b7285" }
+        ]
+      },
+      {
+        "name": "Teal",
+        "hues": [
+          { "name": "H0", "hex": "#e6fcf5" },
+          { "name": "H1", "hex": "#c3fae8" },
+          { "name": "H2", "hex": "#96f2d7" },
+          { "name": "H3", "hex": "#63e6be" },
+          { "name": "H4", "hex": "#38d9a9" },
+          { "name": "H5", "hex": "#20c997" },
+          { "name": "H6", "hex": "#12b886" },
+          { "name": "H7", "hex": "#0ca678" },
+          { "name": "H8", "hex": "#099268" },
+          { "name": "H9", "hex": "#087f5b" }
+        ]
+      },
+      {
+        "name": "Green",
+        "hues": [
+          { "name": "H0", "hex": "#ebfbee" },
+          { "name": "H1", "hex": "#d3f9d8" },
+          { "name": "H2", "hex": "#b2f2bb" },
+          { "name": "H3", "hex": "#8ce99a" },
+          { "name": "H4", "hex": "#69db7c" },
+          { "name": "H5", "hex": "#51cf66" },
+          { "name": "H6", "hex": "#40c057" },
+          { "name": "H7", "hex": "#37b24d" },
+          { "name": "H8", "hex": "#2f9e44" },
+          { "name": "H9", "hex": "#2b8a3e" }
+        ]
+      },
+      {
+        "name": "Lime",
+        "hues": [
+          { "name": "H0", "hex": "#f4fce3" },
+          { "name": "H1", "hex": "#e9fac8" },
+          { "name": "H2", "hex": "#d8f5a2" },
+          { "name": "H3", "hex": "#c0eb75" },
+          { "name": "H4", "hex": "#a9e34b" },
+          { "name": "H5", "hex": "#94d82d" },
+          { "name": "H6", "hex": "#82c91e" },
+          { "name": "H7", "hex": "#74b816" },
+          { "name": "H8", "hex": "#66a80f" },
+          { "name": "H9", "hex": "#5c940d" }
+        ]
+      },
+      {
+        "name": "Yellow",
+        "hues": [
+          { "name": "H0", "hex": "#fff9db" },
+          { "name": "H1", "hex": "#fff3bf" },
+          { "name": "H2", "hex": "#ffec99" },
+          { "name": "H3", "hex": "#ffe066" },
+          { "name": "H4", "hex": "#ffd43b" },
+          { "name": "H5", "hex": "#fcc419" },
+          { "name": "H6", "hex": "#fab005" },
+          { "name": "H7", "hex": "#f59f00" },
+          { "name": "H8", "hex": "#f08c00" },
+          { "name": "H9", "hex": "#e67700" }
+        ]
+      },
+      {
+        "name": "Orange",
+        "hues": [
+          { "name": "H0", "hex": "#fff4e6" },
+          { "name": "H1", "hex": "#ffe8cc" },
+          { "name": "H2", "hex": "#ffd8a8" },
+          { "name": "H3", "hex": "#ffc078" },
+          { "name": "H4", "hex": "#ffa94d" },
+          { "name": "H5", "hex": "#ff922b" },
+          { "name": "H6", "hex": "#fd7e14" },
+          { "name": "H7", "hex": "#f76707" },
+          { "name": "H8", "hex": "#e8590c" },
+          { "name": "H9", "hex": "#d9480f" }
         ]
       }
     ]
