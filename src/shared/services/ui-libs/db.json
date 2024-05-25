@@ -2,51 +2,265 @@
   {
     "id": "ant-design",
     "name": "Ant Design",
-    "url": "https://ant.design/"
+    "url": "https://ant.design/",
+    "palettes": [
+      {
+        "name": "D. Red",
+        "hues": [
+          { "name": "H01", "hex": "#fff1f0" },
+          { "name": "H02", "hex": "#ffccc7" },
+          { "name": "H03", "hex": "#ffa39e" },
+          { "name": "H04", "hex": "#ff7875" },
+          { "name": "H05", "hex": "#ff4d4f" },
+          { "name": "H06", "hex": "#f5222d" },
+          { "name": "H07", "hex": "#cf1322" },
+          { "name": "H08", "hex": "#a8071a" },
+          { "name": "H09", "hex": "#820014" },
+          { "name": "H10", "hex": "#5c0011" }
+        ]
+      },
+      {
+        "name": "Volcano",
+        "hues": [
+          { "name": "H01", "hex": "#fff2e8" },
+          { "name": "H02", "hex": "#ffd8bf" },
+          { "name": "H03", "hex": "#ffbb96" },
+          { "name": "H04", "hex": "#ff9c6e" },
+          { "name": "H05", "hex": "#ff7a45" },
+          { "name": "H06", "hex": "#fa541c" },
+          { "name": "H07", "hex": "#d4380d" },
+          { "name": "H08", "hex": "#ad2102" },
+          { "name": "H09", "hex": "#871400" },
+          { "name": "H10", "hex": "#610b00" }
+        ]
+      },
+      {
+        "name": "S. Orange",
+        "hues": [
+          { "name": "H01", "hex": "#fff7e6" },
+          { "name": "H02", "hex": "#ffe7ba" },
+          { "name": "H03", "hex": "#ffd591" },
+          { "name": "H04", "hex": "#ffc069" },
+          { "name": "H05", "hex": "#ffa940" },
+          { "name": "H06", "hex": "#fa8c16" },
+          { "name": "H07", "hex": "#d46b08" },
+          { "name": "H08", "hex": "#ad4e00" },
+          { "name": "H09", "hex": "#873800" },
+          { "name": "H10", "hex": "#612500" }
+        ]
+      },
+      {
+        "name": "C. Gold",
+        "hues": [
+          { "name": "H01", "hex": "#fffbe6" },
+          { "name": "H02", "hex": "#fff1b8" },
+          { "name": "H03", "hex": "#ffe58f" },
+          { "name": "H04", "hex": "#ffd666" },
+          { "name": "H05", "hex": "#ffc53d" },
+          { "name": "H06", "hex": "#faad14" },
+          { "name": "H07", "hex": "#d48806" },
+          { "name": "H08", "hex": "#ad6800" },
+          { "name": "H09", "hex": "#874d00" },
+          { "name": "H10", "hex": "#613400" }
+        ]
+      }
+    ]
   },
   {
     "id": "bootstrap",
     "name": "Bootstrap",
-    "url": "https://getbootstrap.com/"
+    "url": "https://getbootstrap.com/",
+    "palettes": [
+      {
+        "name": "Blue",
+        "hues": [
+          { "name": "H100", "hex": "" },
+          { "name": "H200", "hex": "" },
+          { "name": "H300", "hex": "" },
+          { "name": "H400", "hex": "" },
+          { "name": "H500", "hex": "" },
+          { "name": "H600", "hex": "" },
+          { "name": "H700", "hex": "" },
+          { "name": "H800", "hex": "" },
+          { "name": "H900", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "chakra",
     "name": "Chakra",
-    "url": "https://v2.chakra-ui.com/"
+    "url": "https://v2.chakra-ui.com/",
+    "palettes": [
+      {
+        "name": "Gray",
+        "hues": [
+          { "name": "H050", "hex": "#F7FAFC" },
+          { "name": "H100", "hex": "#EDF2F7" },
+          { "name": "H200", "hex": "#E2E8F0" },
+          { "name": "H300", "hex": "#CBD5E0" },
+          { "name": "H400", "hex": "#A0AEC0" },
+          { "name": "H500", "hex": "#718096" },
+          { "name": "H600", "hex": "#4A5568" },
+          { "name": "H700", "hex": "#2D3748" },
+          { "name": "H800", "hex": "#1A202C" },
+          { "name": "H900", "hex": "#171923" }
+        ]
+      }
+    ]
   },
   {
     "id": "mantine",
     "name": "Mantine",
-    "url": "https://mantine.dev/"
+    "url": "https://mantine.dev/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "material-design-2",
     "name": "Material Design 2",
-    "url": "https://m2.material.io/"
+    "url": "https://m2.material.io/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "nextui",
     "name": "NextUI",
-    "url": "https://nextui.org/"
+    "url": "https://nextui.org/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "open-color",
     "name": "Open Color",
-    "url": "https://yeun.github.io/open-color/"
+    "url": "https://yeun.github.io/open-color/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "radix",
     "name": "Radix",
-    "url": "https://www.radix-ui.com/"
+    "url": "https://www.radix-ui.com/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "react-suite",
     "name": "React Suite",
-    "url": "https://rsuitejs.com/"
+    "url": "https://rsuitejs.com/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "tailwindcss",
     "name": "Tailwind CSS",
-    "url": "https://tailwindcss.com/"
+    "url": "https://tailwindcss.com/",
+    "palettes": [
+      {
+        "name": "",
+        "hues": [
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" },
+          { "name": "", "hex": "" }
+        ]
+      }
+    ]
   }
 ]

@@ -5,7 +5,7 @@ import { Header } from './header/header.component';
 import { SubHeader } from './sub-header/sub-header.component';
 import { DesktopSidenav } from './desktop-sidenav/desktop-sidenav.component';
 import { MobileSidenav } from './mobile-sidenav/mobile-sidenav.component';
-import { Palette } from './palette/palette.component';
+import { Palettes } from './palettes/palettes.component';
 import { Installer } from './installer/installer.component';
 import { ScrollTop } from './scroll-top/scroll-top.component';
 
@@ -62,8 +62,8 @@ const App = () => {
         <DesktopSidenav active={active.id} onClick={activateLib} />
 
         {/* Content */}
-        <main className='flex-1 items-start h-full p-3 sm:p-4'>
-          <Palette active={active} />
+        <main className='flex-1 items-start h-full p-3 sm:p-4 lg:p-5 xl:p-6 2xl:p-7'>
+          <Palettes active={active} />
         </main>
       </div>
 

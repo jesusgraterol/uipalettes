@@ -28,7 +28,7 @@ interface IMinifiedRecord {
  * Contrast Score
  * The level obtained by appliying the WCAG formula.
  */
-type IContrastScore = 'A' | 'AA' | 'AAA';
+type IContrastScore = 'A' | 'AA' | 'AA L' | 'AAA';
 
 /**
  * Hue
@@ -37,9 +37,9 @@ type IContrastScore = 'A' | 'AA' | 'AAA';
 interface IHue {
   name: string;
   hex: string;
-  contrastRatio: string;
-  normalScore: IContrastScore;
-  largeScore: IContrastScore;
+  contrastRatio: number;
+  score: IContrastScore;
+  lightForeground: boolean;
 }
 
 /**
@@ -89,6 +89,9 @@ interface IUILibsService {
 export type {
   ILibID,
   IMinifiedRecord,
+  IContrastScore,
+  IHue,
+  IPalette,
   IRecord,
   IUILibsService,
 };

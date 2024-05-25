@@ -1,17 +1,18 @@
-// import { useState } from 'react';
-import { IPaletteProps } from './types';
+import { IHue } from '../../shared/services/ui-libs/types';
+import { IPalettesProps } from './types';
+import { Hues } from './hues.component';
 
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
-const Palette = ({ active }: IPaletteProps) => {
-
-
+const Palettes = ({ active }: IPalettesProps) => {
   /* **********************************************************************************************
    *                                        EVENT HANDLERS                                        *
    ********************************************************************************************** */
 
-
+  const copyToClipboard = (hue: IHue) => {
+    console.log(hue);
+  };
 
 
 
@@ -19,9 +20,9 @@ const Palette = ({ active }: IPaletteProps) => {
    *                                           COMPONENT                                          *
    ********************************************************************************************** */
   return (
-    <>
-      <h1>Hello wordld!</h1>
-    </>
+    <section className='grid justify-evenly gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
+      {active.palettes.map((palette, index) => <Hues key={index} palette={palette} />)}
+    </section>
   );
 };
 
@@ -33,5 +34,5 @@ const Palette = ({ active }: IPaletteProps) => {
  *                                         MODULE EXPORTS                                         *
  ************************************************************************************************ */
 export {
-  Palette,
+  Palettes,
 };
