@@ -17,7 +17,7 @@ const ClipboardCard = ({ hex }: IClipboardCardProps) => {
   /* **********************************************************************************************
    *                                             STATE                                            *
    ********************************************************************************************** */
-  const [activeHex, setActiveHex] = useState<string | undefined>();
+  const [visible, setVisible] = useState(false);
 
 
 
@@ -26,21 +26,17 @@ const ClipboardCard = ({ hex }: IClipboardCardProps) => {
    ********************************************************************************************** */
 
   useEffect(() => {
-    setActiveHex(undefined);
-    let outerTimeout: number;
-    let innerTimeout: number;
+    setVisible(false);
+    let timeout: number;
     if (typeof hex === 'string') {
-      outerTimeout = setTimeout(() => {
-        setActiveHex(hex);
-        innerTimeout = setTimeout(() => {
-          setActiveHex(undefined);
-        }, DURATION * 1000);
-      }, 500);
+      setVisible(true);
+      timeout = setTimeout(() => {
+        setVisible(false);
+      }, DURATION * 1000);
     }
     return () => {
-      setActiveHex(undefined);
-      clearTimeout(outerTimeout);
-      clearTimeout(innerTimeout);
+      setVisible(false);
+      clearTimeout(timeout);
     };
   }, [hex]);
 
@@ -51,11 +47,11 @@ const ClipboardCard = ({ hex }: IClipboardCardProps) => {
    ********************************************************************************************** */
   return (
     <div role='tooltip'
-        className={`fixed top-5 inset-x-0 z-20 w-64 md:w-72 mx-auto text-left bg-white shadow-6 transition-transform ${activeHex ? 'translate-y-0' : '-translate-y-32'}`}>
+        className={`fixed top-5 inset-x-0 z-20 w-64 md:w-72 mx-auto text-left bg-white shadow-6 transition-transform ${visible ? 'translate-y-0' : '-translate-y-32'}`}>
       <div className='flex justify-start items-center p-3'>
-        <div className='w-11 h-11 rounded-md' style={{ backgroundColor: activeHex }}></div>
+        <div className='w-11 h-11 rounded-md' style={{ backgroundColor: hex }}></div>
         <div className='ml-2'>
-          <p className='font-semibold'>{activeHex}</p>
+          <p className='font-semibold'>{hex}</p>
           <p className='text-slate-500 text-sm'>Copied to clipboard</p>
         </div>
       </div>

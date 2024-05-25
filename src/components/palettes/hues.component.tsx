@@ -17,7 +17,7 @@ const Hues = ({ palette, copyToClipboard }: IHuesProps) => (
         {palette.hues.map((hue, index) => (
           <tr key={index}
               onClick={() => copyToClipboard(hue)}
-              className={`hover:cursor-pointer hover:opacity-80 ${hue.lightForeground ? 'text-white' : 'text-slate-950'}`}
+              className={`hover:cursor-pointer hover:scale-105 ${hue.lightForeground ? 'text-white' : 'text-slate-950'}`}
               style={{ backgroundColor: hue.hex }}
               role='button'
               aria-label='Copy the hexadecimal code of the color'>
