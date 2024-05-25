@@ -21,6 +21,9 @@ const Palettes = ({ active }: IPalettesProps) => {
 
   const copyToClipboard = (hue: IHue) => {
     setActiveHex(hue.hex);
+    if ('clipboard' in navigator) {
+      navigator.clipboard.writeText(hue.hex).catch((e) => console.error(e));
+    }
   };
 
 
@@ -35,7 +38,7 @@ const Palettes = ({ active }: IPalettesProps) => {
 
       {/* Palettes */}
       <section className='grid justify-evenly gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
-        {active.palettes.map((palette, index) => <Hues key={index}
+        {active.palettes.map((palette) => <Hues key={`${active.id}_${palette.name}`}
                                                         palette={palette}
                                                         copyToClipboard={copyToClipboard} />)}
       </section>
