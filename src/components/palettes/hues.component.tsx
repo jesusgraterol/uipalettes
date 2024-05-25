@@ -5,7 +5,7 @@ import { IHuesProps } from './types';
  ************************************************************************************************ */
 const Hues = ({ palette, copyToClipboard }: IHuesProps) => (
   <article className='w-full bg-white shadow-2'>
-    <table className='w-full h-full table-fixed border-spacing-3'>
+    <table className='w-full h-full table-fixed'>
       <thead>
         <tr>
           <th>{palette.name}</th>

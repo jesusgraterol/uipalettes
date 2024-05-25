@@ -13,6 +13,10 @@ interface IHuesProps {
   copyToClipboard(hue: IHue): void;
 }
 
+interface IClipboardCardProps {
+  hex?: string;
+}
+
 
 /* ************************************************************************************************
  *                                         MODULE EXPORTS                                         *
@@ -20,4 +24,5 @@ interface IHuesProps {
 export type {
   IPalettesProps,
   IHuesProps,
+  IClipboardCardProps,
 };

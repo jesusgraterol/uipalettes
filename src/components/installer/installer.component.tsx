@@ -95,7 +95,7 @@ const Installer = () => {
       <div className='h-1 bg-primary' style={{ width: getProgressBarWidth(remainingTime) }}></div>
 
       {/* Content */}
-      <div className=' flex justify-start items-center p-3'>
+      <div className='flex justify-start items-center p-3'>
         <img src='installer/mobile-installer.png' alt='App Installer Icon' className='w-11 md:hidden' />
         <img src='installer/desktop-installer.png' alt='App Installer Icon' className='w-11 hidden md:block' />
         <div className='ml-2'>
