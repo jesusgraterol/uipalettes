@@ -11,7 +11,32 @@
   "background_color": "#0C0C0C",
   "default_locale": "en",
   "orientation": "portrait",
-  "screenshots": [],
+  "screenshots": [
+    {
+      "src": "pwa-assets/screenshots/01.png",
+      "type": "image/png",
+      "sizes": "1900x1077",
+      "form_factor": "wide"
+    },
+    {
+      "src": "pwa-assets/screenshots/02.png",
+      "type": "image/png",
+      "sizes": "894x524",
+      "form_factor": "wide"
+    },
+    {
+      "src": "pwa-assets/screenshots/03.png",
+      "type": "image/png",
+      "sizes": "370x662",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "pwa-assets/screenshots/04.png",
+      "type": "image/png",
+      "sizes": "370x662",
+      "form_factor": "narrow"
+    }
+  ],
   "icons": [
     {
       "src": "pwa-assets/icons/16x16.png",
