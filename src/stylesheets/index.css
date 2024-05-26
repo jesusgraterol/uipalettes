@@ -56,6 +56,12 @@
  * Body
  */
 
+/* Body element */
+body {
+  /* disable pull to refresh */
+  overscroll-behavior-y: contain; 
+}
+
 /* Body with mobile sidenav */
 body:has(#mobileSidenav.translate-x-0) {
  overflow-y: hidden;

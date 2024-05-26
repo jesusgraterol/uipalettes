@@ -2,7 +2,7 @@
   "name": "uipalettes",
   "description": "uipalettes is a Progressive Web App (PWA) that provides web developers access to a curated library of high-quality color palettes that fully comply with the Web Content Accessibility Guidelines (WCAG).",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
