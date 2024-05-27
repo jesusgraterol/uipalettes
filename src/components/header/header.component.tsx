@@ -31,21 +31,24 @@ const Header = ({ displaySidenav }: IHeaderProps) => {
             src='logo/logo-white.png'
             alt='uipalettes Logo'/>
       <span className='flex-1'></span>
-      <Button color='primary' className='hidden sm:flex' onClick={viewSourceCode}>
+      <Button color='primary'
+              className='hidden sm:flex'
+              onClick={viewSourceCode}
+              ariaLabel='Source code of the app'>
           <Code color='white' aria-hidden='true' /> <span>Source Code</span>
         </Button>
       <Button color='primary'
               rounded={true}
               className='sm:hidden'
-              aria-label='View Source Code'
-              onClick={viewSourceCode}>
+              onClick={viewSourceCode}
+              ariaLabel='Source code of the app'>
         <Code color='white' aria-hidden='true' />
       </Button>
       <Button color='primary'
               rounded={true}
               className='xl:hidden'
               onClick={displaySidenav}
-              aria-label='Display Menu'>
+              ariaLabel='Display Menu'>
         <Menu color='white' aria-hidden='true' />
       </Button>
     </Toolbar>

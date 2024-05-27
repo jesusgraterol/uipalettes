@@ -88,9 +88,9 @@ const Installer = () => {
    *                                           COMPONENT                                          *
    ********************************************************************************************** */
   return (
-    <button role='tooltip'
-        onClick={installApp}
-        className={`fixed bottom-5 inset-x-0 z-20 w-64 md:w-72 mx-auto text-left bg-white shadow-6 hover:bg-gray-200 transition-transform duration-500 ${visible ? 'translate-y-0' : 'translate-y-40'}`}>
+    <button aria-label='Install Application'
+            onClick={installApp}
+            className={`fixed bottom-5 inset-x-0 z-20 w-64 md:w-72 mx-auto text-left bg-white shadow-6 hover:bg-gray-200 transition-transform duration-500 ${visible ? 'translate-y-0' : 'translate-y-40'}`}>
       {/* Progress Bar */}
       <div className='h-1 bg-primary' style={{ width: getProgressBarWidth(remainingTime) }}></div>
 

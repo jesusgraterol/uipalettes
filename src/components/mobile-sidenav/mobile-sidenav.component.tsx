@@ -53,9 +53,9 @@ const MobileSidenav = ({
                 id='mobileSidenav'
                 className={`fixed top-0 right-0 w-64 h-full bg-white overflow-auto z-40 transition-transform duration-500 ${isOpened ? 'translate-x-0' : 'translate-x-80'}`}>
         <div className='flex items-center p-3'>
-          <h3 className='text-xl'>UI Libraries</h3>
+          <p className='text-xl'>UI Libraries</p>
           <span className='flex-1'></span>
-          <Button color='transparent' rounded onClick={closeSidenav} aria-label='Close Sidenav'>
+          <Button color='transparent' rounded onClick={closeSidenav} ariaLabel='Close Sidenav'>
             <MoveRight color='black' aria-hidden='true' />
           </Button>
         </div>

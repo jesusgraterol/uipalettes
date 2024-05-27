@@ -10,6 +10,7 @@ type IButtonProps = PropsWithChildren<{
   color: IButtonColor,
   rounded?: boolean,
   className?: string,
+  ariaLabel: string,
   onClick: () => void
 }>;
 

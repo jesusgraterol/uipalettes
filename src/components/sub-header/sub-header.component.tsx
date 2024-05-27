@@ -18,7 +18,7 @@ const SubHeader = ({ active }: ISubHeaderProps) => {
       <Button color='secondary'
               rounded={true}
               onClick={handleLinkClick}
-              aria-label='Open UI Library Website'>
+              ariaLabel='Open UI Library Website'>
         <ExternalLink color='white' aria-hidden='true' />
       </Button>
     </Toolbar>

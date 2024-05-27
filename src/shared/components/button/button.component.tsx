@@ -33,6 +33,7 @@ const Button = ({
   color,
   rounded = false,
   className = '',
+  ariaLabel,
   onClick,
   children,
 } : IButtonProps) => {
@@ -45,6 +46,7 @@ const Button = ({
   // component
   return (
     <button className={`text-white flex ${roundedClass} p-3 sm:p-4 ${bgClass} active:scale-90 ${className}`}
+            aria-label={ariaLabel}
             onClick={onClick}>
       {children}
     </button>
