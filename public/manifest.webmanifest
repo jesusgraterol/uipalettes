@@ -15,13 +15,13 @@
     {
       "src": "pwa-assets/screenshots/01.png",
       "type": "image/png",
-      "sizes": "1900x1077",
+      "sizes": "982x736",
       "form_factor": "wide"
     },
     {
       "src": "pwa-assets/screenshots/02.png",
       "type": "image/png",
-      "sizes": "894x524",
+      "sizes": "982x736",
       "form_factor": "wide"
     },
     {
