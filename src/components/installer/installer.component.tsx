@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
-import { SWService } from '../../shared/services/sw/sw.service';
+import { SWService } from 'sw-service';
 
 /* **********************************************************************************************
  *                                           CONSTANTS                                          *
  ********************************************************************************************** */
 
-// the approximate number of seconds the service worker takes to install
-const SW_INSTALLATION_DURATION: number = 3;
-
 // the number of seconds the installer can be displayed for
 const DURATION: number = 3 * 1000;
+
+
 
 
 
@@ -26,6 +25,8 @@ const getProgressBarWidth = (remaining: number): string => `${((remaining * 100)
 
 
 
+
+
 /* ************************************************************************************************
  *                                         IMPLEMENTATION                                         *
  ************************************************************************************************ */
@@ -35,6 +36,8 @@ const Installer = () => {
    ********************************************************************************************** */
   const [visible, setVisible] = useState(false);
   const [remainingTime, setRemainingTime] = useState(DURATION);
+
+
 
 
 
@@ -49,12 +52,9 @@ const Installer = () => {
     // allow a small delay so the service worker is properly registered
     let intervalKey: number;
     const timeoutKey: number = setTimeout(() => {
-      // check if the app can be installed
-      const canBeInstalled: boolean = SWService.canAppBeInstalled();
-      setVisible(canBeInstalled);
-
-      // initialize the count down if it can be installed
-      if (canBeInstalled) {
+      // if the app can be installed, show the install button and init the visibility count down
+      if (SWService.installer && SWService.installer.canAppBeInstalled()) {
+        setVisible(true);
         intervalKey = setInterval(() => {
           remaining -= 1;
           setRemainingTime(remaining);
@@ -64,12 +64,14 @@ const Installer = () => {
           }
         }, 1);
       }
-    }, SW_INSTALLATION_DURATION * 1000);
+    }, SWService.registrationDurationSeconds * 1000);
     return () => {
       clearInterval(timeoutKey);
       clearInterval(intervalKey);
     };
   }, []);
+
+
 
 
 
@@ -79,8 +81,12 @@ const Installer = () => {
 
   const installApp = () => {
     setVisible(false);
-    SWService.installApp();
+    if (SWService.installer && SWService.installer.canAppBeInstalled()) {
+      SWService.installer.installApp();
+    }
   };
+
+
 
 
 
