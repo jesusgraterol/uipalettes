@@ -81,7 +81,7 @@ const Installer = () => {
 
   const installApp = () => {
     setVisible(false);
-    if (SWService.installer && SWService.installer.canAppBeInstalled()) {
+    if (SWService.installer?.canAppBeInstalled()) {
       SWService.installer.installApp();
     }
   };
