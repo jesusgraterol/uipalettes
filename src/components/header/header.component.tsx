@@ -29,7 +29,9 @@ const Header = ({ displaySidenav }: IHeaderProps) => {
     <Toolbar color='primary'>
       <img className='w-44 sm:w-48 md:w-52 lg:w-56 xl:w-60'
             src='logo/logo-white.png'
-            alt='uipalettes Logo'/>
+            alt='uipalettes Logo'
+            width="176"
+            height="44"/>
       <span className='flex-1'></span>
       <Button color='primary'
               className='hidden sm:flex'

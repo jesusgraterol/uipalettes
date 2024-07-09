@@ -102,8 +102,8 @@ const Installer = () => {
 
       {/* Content */}
       <div className='flex justify-start items-center p-3'>
-        <img src='installer/mobile-installer.png' alt='App Installer Icon' className='w-11 md:hidden' />
-        <img src='installer/desktop-installer.png' alt='App Installer Icon' className='w-11 hidden md:block' />
+        <img src='installer/mobile-installer.png' alt='App Installer Icon' className='w-11 md:hidden' width="44" height="44" />
+        <img src='installer/desktop-installer.png' alt='App Installer Icon' className='w-11 hidden md:block' width="44" height="44" />
         <div className='ml-2'>
           <p className='font-semibold'>Install App</p>
           <p className='text-slate-500 text-sm'>uipalettes.web.app</p>
